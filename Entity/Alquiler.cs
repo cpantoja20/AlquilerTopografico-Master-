@@ -7,14 +7,22 @@ namespace Entity
 
     public class Alquiler
     {
-        public string IdEquipo { get; set; }
-
-        public string IdCliente { get; set; }
-       
-        public decimal Valor { get; set; }
-        
+              
         [Key]
-        public string IdAlquiler { get; set; }
+        public string AlquilerId { get; set; }
+
+        public string TiempoAlquiler { get; set;}
+
+         public decimal Valor { get; set; }
+
+         public void CalcularAlquiler(string TiempoAlquiler){
+
+         }
+
+         
+
+         public int IdCliente {get; set;}
+         public Cliente Cliente {get; set;}
 
     }
 }

@@ -37,3 +37,6 @@ namespace Datos.Migrations
         }
     }
 }
+
+// git remote add origin https://github.com/cpantoja20/AlquilerTopografico-Master-.git
+//git push -u origin master -->

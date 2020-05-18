@@ -2,6 +2,6 @@ export class Equipo {
     idEquipo: string;
     nEquipo: string;
     marca: string;
-    tiempoAlquiler: Date;
+    tiempoAlquiler: string;
     valor: number;
 }

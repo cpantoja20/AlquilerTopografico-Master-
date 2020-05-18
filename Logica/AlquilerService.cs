@@ -19,7 +19,7 @@ namespace Logica
             try
             {
                 
-                var AlquilerAux = _context.Alquilers.Find(alquiler.IdAlquiler);
+                var AlquilerAux = _context.Alquilers.Find(alquiler.AlquilerId);
                 if (AlquilerAux != null)
                 {
                     return new GuardarAlquilerResponse($"Error de la Aplicacion: El Alquiler ya se encuentra registrado!");
@@ -40,20 +40,20 @@ namespace Logica
             List<Alquiler> alquilers = _context.Alquilers.ToList();
             return alquilers;
         }
-        public string Eliminar(string IdAlquiler)
+        public string Eliminar(string AlquilerId)
         {
             try
             {
                 
-                var alquiler = _context.Alquilers.Find(IdAlquiler);
+                var alquiler = _context.Alquilers.Find(AlquilerId);
                 if (alquiler != null)
                 {
                     _context.Alquilers.Remove(alquiler);
-                    return ($"El registro {alquiler.IdAlquiler} se ha eliminado satisfactoriamente.");
+                    return ($"El registro {alquiler.AlquilerId} se ha eliminado satisfactoriamente.");
                 }
                 else
                 {
-                    return ($"Lo sentimos, {IdAlquiler} no se encuentra registrado.");
+                    return ($"Lo sentimos, {AlquilerId} no se encuentra registrado.");
                 }
             }
             catch (Exception e)

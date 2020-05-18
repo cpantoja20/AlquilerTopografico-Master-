@@ -1,5 +1,7 @@
 using System;
+using System.Security;
 using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
 
 namespace Entity
 {
@@ -12,5 +14,7 @@ namespace Entity
         public int Marca { get; set; }
         public string Tiempo { get; set; }
         public decimal Valor { get; set; }
+
+        public List<Alquiler> Alquilers { get; } = new List<Alquiler>();
     }
 }
