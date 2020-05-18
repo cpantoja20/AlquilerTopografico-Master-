@@ -1,0 +1,11 @@
+D:\Desktop\Cyndy USB\ProyectoWeb2020\DATOS\bin\Debug\netstandard2.1\Datos.deps.json
+D:\Desktop\Cyndy USB\ProyectoWeb2020\DATOS\bin\Debug\netstandard2.1\Datos.dll
+D:\Desktop\Cyndy USB\ProyectoWeb2020\DATOS\bin\Debug\netstandard2.1\Datos.pdb
+D:\Desktop\Cyndy USB\ProyectoWeb2020\DATOS\bin\Debug\netstandard2.1\Entity.dll
+D:\Desktop\Cyndy USB\ProyectoWeb2020\DATOS\bin\Debug\netstandard2.1\Entity.pdb
+D:\Desktop\Cyndy USB\ProyectoWeb2020\DATOS\obj\Debug\netstandard2.1\Datos.csprojAssemblyReference.cache
+D:\Desktop\Cyndy USB\ProyectoWeb2020\DATOS\obj\Debug\netstandard2.1\Datos.AssemblyInfoInputs.cache
+D:\Desktop\Cyndy USB\ProyectoWeb2020\DATOS\obj\Debug\netstandard2.1\Datos.AssemblyInfo.cs
+D:\Desktop\Cyndy USB\ProyectoWeb2020\DATOS\obj\Debug\netstandard2.1\Datos.csproj.CopyComplete
+D:\Desktop\Cyndy USB\ProyectoWeb2020\DATOS\obj\Debug\netstandard2.1\Datos.dll
+D:\Desktop\Cyndy USB\ProyectoWeb2020\DATOS\obj\Debug\netstandard2.1\Datos.pdb

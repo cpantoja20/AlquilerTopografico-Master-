@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2>Registro de Clientes</h2>
+            <form>
+
+                <form>
+                    <div class="form-group">
+                        <label>Tipo de Identificacion</label>
+                    <select type = text name="tipoId" [(ngModel)]="cliente.tipoId" class="form-control" >
+                        <option>Cedula de Ciudadania</option>
+                        <option>N I T </option>
+                        <option>Pasaporte</option>
+                        <option>Cedula Extranjeria</option>
+                    </select>
+                    </div>
+                  </form>
+
+                <div class="form-group">
+                    <label>Id Cliente</label>
+                    <input type="text" name="nEquipo" [(ngModel)]="equipo.nEquipo" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Nombre del Cliente</label>
+                    <input type="text" name="nCliente" [(ngModel)]="cliente.nCliente" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Telefono </label>
+                    <input type="tel" name="telefono" [(ngModel)]="cliente.telefono" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Direccion</label>
+                    <input type="text" name="direccion" [(ngModel)]="cliente.direccion" class="form-control" />
+                </div>
+                <!-- Ojo aqui va el alquiler-->
+                <div class="text-center">
+                    <button class="btn btn-primary mr-1" (click)="add()">Registrar</button>
+                    <button class="btn btn-secondary" type="reset">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
