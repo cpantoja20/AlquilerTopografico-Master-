@@ -64,7 +64,6 @@ namespace Entity
             {
                 Marca="Sokkia";
             }
-
         }
         public List<Equipo> Equipos { get; } = new List<Equipo>();
     }
