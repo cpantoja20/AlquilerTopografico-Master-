@@ -6790,11 +6790,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Desktop\\Cyndy USB\\ProyectoWeb2020\\logica\\Logica.csproj",
+      "projectUniqueName": "D:\\Desktop\\Cyndy USB\\ProyectoWeb2020\\Logica\\Logica.csproj",
       "projectName": "Logica",
-      "projectPath": "D:\\Desktop\\Cyndy USB\\ProyectoWeb2020\\logica\\Logica.csproj",
+      "projectPath": "D:\\Desktop\\Cyndy USB\\ProyectoWeb2020\\Logica\\Logica.csproj",
       "packagesPath": "C:\\Users\\sindy\\.nuget\\packages\\",
-      "outputPath": "D:\\Desktop\\Cyndy USB\\ProyectoWeb2020\\logica\\obj\\",
+      "outputPath": "D:\\Desktop\\Cyndy USB\\ProyectoWeb2020\\Logica\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sindy\\AppData\\Roaming\\NuGet\\NuGet.Config"

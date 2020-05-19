@@ -18,13 +18,11 @@ namespace Logica
         {
             try
             {
-                
                 var AlquilerAux = _context.Alquilers.Find(alquiler.AlquilerId);
                 if (AlquilerAux != null)
                 {
                     return new GuardarAlquilerResponse($"Error de la Aplicacion: El Alquiler ya se encuentra registrado!");
                 }        
-              
                 _context.Alquilers.Add(alquiler);
                 _context.SaveChanges();
                 return new GuardarAlquilerResponse(alquiler);
@@ -63,10 +61,10 @@ namespace Logica
             }
 
         }
-        public Alquiler BuscarxIdentificacion(int IdAlquiler)
+        public Alquiler BuscarxIdentificacion(int AlquilerId)
         {
             
-            Alquiler alquiler = _context.Alquilers.Find(IdAlquiler);
+            Alquiler alquiler = _context.Alquilers.Find(AlquilerId);
             return alquiler;
         }
     }

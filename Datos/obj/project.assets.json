@@ -6771,11 +6771,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Desktop\\Cyndy USB\\ProyectoWeb2020\\datos\\Datos.csproj",
+      "projectUniqueName": "D:\\Desktop\\Cyndy USB\\ProyectoWeb2020\\Datos\\Datos.csproj",
       "projectName": "Datos",
-      "projectPath": "D:\\Desktop\\Cyndy USB\\ProyectoWeb2020\\datos\\Datos.csproj",
+      "projectPath": "D:\\Desktop\\Cyndy USB\\ProyectoWeb2020\\Datos\\Datos.csproj",
       "packagesPath": "C:\\Users\\sindy\\.nuget\\packages\\",
-      "outputPath": "D:\\Desktop\\Cyndy USB\\ProyectoWeb2020\\datos\\obj\\",
+      "outputPath": "D:\\Desktop\\Cyndy USB\\ProyectoWeb2020\\Datos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sindy\\AppData\\Roaming\\NuGet\\NuGet.Config"

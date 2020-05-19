@@ -7,11 +7,11 @@ namespace Entity
     {
         public string TipoId { get; set; }
         [Key]
-        public int IdCliente { get; set; }
+        public int ClienteId { get; set; }
         public string NCliente { get; set; }
         public int Telefono { get; set; }
         public string Direccion { get; set; }
-        public float Alquiler { get; set; }
+        public int AlquilerId { get; set; }
 
     }
 }

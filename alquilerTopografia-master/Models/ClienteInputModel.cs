@@ -8,7 +8,7 @@ public class ClienteInputModel
     [Required]
     public int TipoId { get; set; }
     [Required]
-    public int IdCliente { get; set; }
+    public int ClienteId { get; set; }
     [Required(ErrorMessage = "El Nombre es Requerido")]
     public string NCliente { get; set; }
     [Required(ErrorMessage = "El Telefono es Requerido")]
@@ -23,7 +23,7 @@ public class ClienteViewModel : ClienteInputModel
     }
     public ClienteViewModel(Cliente cliente)
     {
-        IdCliente = cliente.IdCliente;
+        ClienteId = cliente.ClienteId;
         NCliente = cliente.NCliente;
         Telefono = cliente.Telefono;
         Direccion = cliente.Direccion;
@@ -31,3 +31,4 @@ public class ClienteViewModel : ClienteInputModel
     }
     public decimal Alquiler { get; set; }
 }
+
