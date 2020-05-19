@@ -12,6 +12,7 @@ namespace Entity
         public string EquipoId { get; set; }
         public string NEquipo { get; set; }
         public string Marca { get; set; }
+        
 
         public void MarcaEquipo()
         {

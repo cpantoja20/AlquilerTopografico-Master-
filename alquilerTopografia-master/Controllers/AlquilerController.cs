@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using alquilerTopografia_master.Models;
 using Datos;
 using Entity;
 using Logica;
@@ -14,68 +15,37 @@ namespace alquilerTopografia_master.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AlquilerController: ControllerBase
+    public class AlquilerController : ControllerBase
     {
         private readonly AlquilerService _alquilerService;
         public AlquilerController(AlquilerContext context)
         {
             _alquilerService = new AlquilerService(context);
         }
-         // GET: api/Cliente
+
+        // GET: api/Alquiler
         [HttpGet]
-        public IEnumerable<ClienteViewModel> Gets()
+        public IEnumerable<AlquilerViewModel> Gets()
         {
-            var alquilers = _alquilerService.ConsultarTodos().Select(p=> new ClienteViewModel(p));
+            var alquilers = _alquilerService.ConsultarTodosAlquiler().Select(p => new AlquilerViewModel());
             return alquilers;
         }
 
-        // GET: api/Cliente/5
-        [HttpGet("{ClienteId}")]
-        public ActionResult<ClienteViewModel> Get(int AlquilerId)
-        {
-            var alquiler = _alquilerService.BuscarxIdentificacion(AlquilerId);
-            if (alquiler == null) return NotFound();
-            var alquilerViewModel = new ClienteViewModel();
-            return alquilerViewModel;
-        }
-        
-        // POST: api/Cliente
+        // POST: api/Alquiler
         [HttpPost]
-        public ActionResult<ClienteViewModel> Post(ClienteInputModel clienteInput)
+        
+        //
+        private Alquiler MapearAlquiler(AlquilerInputModel alquilerInput)
         {
-            Cliente cliente = MapearProducto(clienteInput);
-            var response = _alquilerService.Guardar(alquiler);
-            if (response.Error) 
+            var alquiler = new Alquiler
             {
-                return BadRequest(response.Mensaje);
-            }
-            return Ok(response.Alquiler);
-        }
-      
-        // DELETE: api/Producto/5
-        [HttpDelete("{AlquilerId}")]
-        public ActionResult<string> Delete(string AlquilerId)
-        {
-            string mensaje = _alquilerService.Eliminar(AlquilerId);
-            return Ok(mensaje);
-        }
-        private Cliente MapearProducto(ClienteInputModel clienteInput)
-        {
-            var cliente = new Cliente
-            {
-                ClienteId = clienteInput.ClienteId,
-                NCliente = clienteInput.NCliente,
-                Telefono = clienteInput.Telefono,
-                Direccion = clienteInput.Direccion,
-               
+                AlquilerId = alquilerInput.AlquilerId,
+                EquipoId = alquilerInput.EquipoId,
+                NEquipo = alquilerInput.NEquipo,
+                TiempoAlquiler = alquilerInput.TiempoAlquiler
             };
-            return cliente;
-        }
-        // PUT: api/Cliente/5
-        [HttpPut("{AlquilerId}")]
-        public ActionResult<string> Put(string AlquilerId, Cliente cliente)
-        {
-            throw new NotImplementedException();
+            return alquiler;
+
         }
     }
 }

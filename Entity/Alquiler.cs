@@ -15,8 +15,8 @@ namespace Entity
         public string TiempoAlquiler { get; set; }
 
         public double Valor { get; set; }
-
-        public void ValorAlquiler(string NEquipo)
+         
+        public void ValorAlquiler()
         {
             if (NEquipo.Equals("Estacion") && TiempoAlquiler.Equals("Dia"))
             {

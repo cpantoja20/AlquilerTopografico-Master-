@@ -12,6 +12,6 @@ namespace Datos
 
         public DbSet<Alquiler> Alquilers { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
-        public DbSet<Equipo> Esquipos { get; set; }
+        public DbSet<Equipo> Equipos { get; set; }
     }
 }

@@ -6,83 +6,37 @@ using System.Linq;
 
 namespace Logica
 {
-    public class AlquilerService
+    public class AlquilerService 
     {
         private readonly AlquilerContext _context;
+
         public AlquilerService(AlquilerContext context)
         {
-           _context = context;
+            _context = context;
         }
 
-        public GuardarAlquilerResponse Guardar(Alquiler alquiler)
+        public List<Cliente> ConsultarTodosClientes()
         {
-            try
-            {
-                var AlquilerAux = _context.Alquilers.Find(alquiler.AlquilerId);
-                if (AlquilerAux != null)
-                {
-                    return new GuardarAlquilerResponse($"Error de la Aplicacion: El Alquiler ya se encuentra registrado!");
-                }        
-                _context.Alquilers.Add(alquiler);
-                _context.SaveChanges();
-                return new GuardarAlquilerResponse(alquiler);
-            }
-            catch (Exception e)
-            {
-                return new GuardarAlquilerResponse($"Error de la Aplicacion: {e.Message}");
-            }
+            List<Cliente> clientes = _context.Clientes.ToList();
+            return clientes;
         }
-    public List<Alquiler> ConsultarTodos()
+
+        public List<Equipo> ConsultarTodosEquipos()
         {
-            
+            List<Equipo> equipos = _context.Equipos.ToList();
+            return equipos;
+        }
+
+        public List<Alquiler> ConsultarTodosAlquiler()
+        {
             List<Alquiler> alquilers = _context.Alquilers.ToList();
             return alquilers;
         }
-        public string Eliminar(string AlquilerId)
-        {
-            try
-            {
-                
-                var alquiler = _context.Alquilers.Find(AlquilerId);
-                if (alquiler != null)
-                {
-                    _context.Alquilers.Remove(alquiler);
-                    return ($"El registro {alquiler.AlquilerId} se ha eliminado satisfactoriamente.");
-                }
-                else
-                {
-                    return ($"Lo sentimos, {AlquilerId} no se encuentra registrado.");
-                }
-            }
-            catch (Exception e)
-            {
 
-                return $"Error de la Aplicación: {e.Message}";
-            }
-
-        }
-        public Alquiler BuscarxIdentificacion(int AlquilerId)
+        public Cliente BuscarxNombreCliente (string NCliente)
         {
-            
-            Alquiler alquiler = _context.Alquilers.Find(AlquilerId);
-            return alquiler;
+            Cliente clientes = _context.Clientes.Find(NCliente);
+            return clientes;
         }
-    }
-
-    public class GuardarAlquilerResponse 
-    {
-        public GuardarAlquilerResponse(Alquiler alquiler)
-        {
-            Error = false;
-            Alquiler = alquiler;
-        }
-        public GuardarAlquilerResponse(string mensaje)
-        {
-            Error = true;
-            Mensaje = mensaje;
-        }
-        public bool Error { get; set; }
-        public string Mensaje { get; set; }
-        public Alquiler Alquiler { get; set; }
     }
 }
