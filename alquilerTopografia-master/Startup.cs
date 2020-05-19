@@ -37,14 +37,14 @@ namespace alquilerTopografia_master
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "School API",
-                    Description = "School API - ASP.NET Core Web API",
+                    Title = "AlquilerTopografia-master API",
+                    Description = "AlquilerTopografia-master API - ASP.NET Core Web API",
                     TermsOfService = new Uri("https://cla.dotnetfoundation.org/"),
                     Contact = new OpenApiContact
                     {
-                        Name = "Unicesar",
+                        Name = "Cyndy",
                         Email = string.Empty,
-                        Url = new Uri("https://github.com/borisgr04/CrudNgDotNetCore3"),
+                        Url = new Uri("https://github.com/cpantoja20/AlquilerTopografico-Master-"),
                     },
                     License = new OpenApiLicense
                     {
