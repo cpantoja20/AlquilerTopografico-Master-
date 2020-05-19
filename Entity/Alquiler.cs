@@ -1,5 +1,6 @@
 using Entity;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Entity
@@ -7,22 +8,17 @@ namespace Entity
 
     public class Alquiler
     {
-              
+
         [Key]
         public string AlquilerId { get; set; }
 
-        public string TiempoAlquiler { get; set;}
+        public DateTime FInicial { get; set; }
 
-         public decimal Valor { get; set; }
+        public DateTime FFinal { get; set; }
 
-         public void CalcularAlquiler(string TiempoAlquiler){
+        public double Valor { get; set; }
 
-         }
-
-         
-
-         public int IdCliente {get; set;}
-         public Cliente Cliente {get; set;}
+        public List<Alquiler> Alquilers { get; } = new List<Alquiler>();
 
     }
 }

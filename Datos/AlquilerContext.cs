@@ -10,10 +10,6 @@ namespace Datos
         {
         }
 
-        //public DbSet<Cliente> Clientes { get; set; }
-
-        // public DbSet<Equipo> Equipos { get; set; }
-
         public DbSet<Alquiler> Alquilers { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Equipo> Esquipos { get; set; }
